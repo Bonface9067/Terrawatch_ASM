@@ -1,0 +1,42 @@
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+
+# Environments
+.env
+.env.*
+# .venv
+# env/
+# venv/
+# ENV/
+# env.bak/
+# venv.bak/
+
+# #vs code
+# .vscode
+# .vscode/
+
+# Project specific
+*.log
+logs/*.log
+data/exports/*
+data/temp/*
+reports/*.pdf
+reports/*.txt
+config/*
+# Secrets
+*.json
+*.key
+*.pem
+credentials.json
+service-account-key.json
+*.sh
