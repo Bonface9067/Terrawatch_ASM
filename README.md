@@ -23,6 +23,20 @@ This repository contains the **kaggle_demo_BigQueryAI_FINAL.ipynb** notebook, an
 
 ## Quick Start
 
+- To run/test the code, create a folder on you local machine, upon cretion of the folder, open command prompt in that folder and run this command to create a virtual environment
+
+```python
+# ========================================
+# 1. ENVIRONMENT SETUP
+# ========================================
+python -m venv BigqueryAI
+
+# ========================================
+# 1. Requirements setup
+# ========================================
+pip install -r requirements.txt
+```
+
 1. **Open** `kaggle_demo_BigQueryAI_FINAL.ipynb` in Kaggle (or a GCP‑enabled Jupyter environment).
 2. **Run the Setup cells** (auth, imports, config). Ensure BigQuery and, if used, Earth Engine are authenticated.
 3. **Set parameters** for your AOI and time window (see [Parameters](#parameters)).
