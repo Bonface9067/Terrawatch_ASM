@@ -3,7 +3,7 @@
 [![Kaggle](https://img.shields.io/badge/Platform-Kaggle-20BEFF?logo=kaggle)](https://www.kaggle.com/)
 [![BigQuery](https://img.shields.io/badge/Google-BigQuery-4285F4?logo=google-cloud)](https://cloud.google.com/bigquery)
 [![Earth Engine](https://img.shields.io/badge/Google_Earth_Engine-4285F4?logo=google-earth)](https://earthengine.google.com/)
-[![Python](https://img.shields.io/badge/Python-3.12.10-3776AB?logo=python)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/Python-3.12.5-3776AB?logo=python)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 ## 🌍 Overview
@@ -22,7 +22,7 @@ TerraWatch ASM is an end-to-end geospatial analytics and AI workflow that levera
 ## 📋 Prerequisites
 
 ### System Requirements
-- **Python:** 3.12.10 (required for reproducibility)
+- **Python:** 3.12.5 (required for reproducibility)
 - **Platform:** Kaggle Notebooks or Local Jupyter environment
 - **OS:** Windows/macOS/Linux with `gcloud` CLI installed
 
