@@ -50,11 +50,11 @@ TerraWatch ASM is an end-to-end geospatial analytics and AI workflow that levera
 Using Git (Recommended)
 ```bash
 # Clone via HTTPS
-git clone https://github.com/terrawatch/asm-bigquery-ai.git
+git clone https://github.com/Bonface9067/Terrawatch_ASM.git
 cd Terrawatch_asm-bigquery-ai
 
 # Or clone via SSH (if you have SSH keys configured)
-git clone git@github.com:terrawatch/asm-bigquery-ai.git
+git clone (PASTE_SSH_KEY_FROM_REPOSITORY_PAGE_UNDER_THE_GREEN_CODE_BUTTON) 
 cd Terrawatch_asm-bigquery-ai
 ```
 #### Direct Download
@@ -64,7 +64,7 @@ cd Terrawatch_asm-bigquery-ai
 - Extract the ZIP file to your desired location
 - Navigate to the extracted folder:
 
-NB: Download the code into one folder and run it, as the notebook depends on the configurations and data in the other files
+NB: **Keep all files in the same folder structure as downloaded/cloned. The notebook depends on configuration files (config/config.yaml), environment variables (.env), and data files that must remain in their relative paths. Do not separate or move individual files.**
 
 ### 1. Environment Setup
 

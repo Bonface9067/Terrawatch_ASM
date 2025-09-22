@@ -136,10 +136,10 @@ nibabel==5.3.2
 nipype==1.10.0
 notebook==7.4.5
 notebook_shim==0.2.4
-numpy==1.26.0
+numpy>=1.26.0
 oauthlib==3.3.1
 packaging==25.0
-pandas==2.1.4
+pandas>=2.1.4
 pandas-gbq==0.29.2
 pandocfilters==1.5.1
 parso==0.8.4
