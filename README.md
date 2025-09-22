@@ -168,6 +168,16 @@ SELECT * FROM series;
 | `TIMESERIES_START_DATE` | string | Analysis start date | `"2018-01-01"` |
 | `TIMESERIES_END_DATE` | string | Analysis end date | `"2025-09-01"` |
 
+### BigqueryAI Features used
+#### Approach 1: The AI Architect
+- `ML.GENERATE_TEXT` 
+- `AI.GENERATE_BOOL`
+- `AI.FORECAST` 
+
+#### Approach 2: The Semantic Detective
+- `ML.GENERATE_EMBEDDING` 
+- `VECTOR_SEARCH`
+
 ### Advanced Parameters
 
 <details>
@@ -286,6 +296,7 @@ The workflow generates the following outputs:
 - CSV files to Google Cloud Storage
 - Visualization charts (PNG/SVG)
 - JSON reports for dashboard integration
+
 
 ## 🤝 Contributing
 
