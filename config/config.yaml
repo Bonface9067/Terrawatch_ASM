@@ -1,0 +1,219 @@
+# Main configuration file for TerraWatch ASM - Taita Taveta County
+
+project:
+  name: terrawatch-asm
+  version: 2.0.0
+  region: Taita Taveta County, Kenya #Adaptable to other regions
+  description: AI-powered mining impact monitoring system
+
+# Google Cloud Platform settings
+gcp:
+  project_id: ${GCP_PROJECT_ID:-terrawatch-asm}
+  region: europe-west1  # Closest to Kenya for lower latency
+  zone: europe-west1-b
+
+# BigQuery configuration (EU region for Taita Taveta)
+bigquery:
+  location: EU
+  datasets:
+    - eo          # Earth observation data
+    - analytics   # Processed analytics
+    - alerts      # Detection alerts
+    - ml          # Machine learning
+    - docs        # Document embeddings
+    - reports     # Generated reports
+    - reference   # Reference data
+    - logs        # System logs
+    - kaggle      # Kaggle demo dataset
+
+# Earth Engine configuration
+earth_engine:
+  service_account: ${EE_SERVICE_ACCOUNT}
+  private_key_file: ${EE_PRIVATE_KEY_FILE:-......................................................} #INSERT PATH TO YOU SERVICE ACCOUNT JSON FILE
+  cloud_threshold: 20  # Maximum cloud cover percentage
+  scale: 10           # Processing scale in meters (Sentinel-2)
+  scale_landsat: 30   # Processing scale for Landsat
+  scale_viirs: 750    # Processing scale for VIIRS
+  max_pixels: 1000000000  # 1e9
+  
+  # Sentinel-2 tiles covering Taita Taveta
+  sentinel_tiles:
+    - 37MCS
+    - 37MDS
+    - 37MES
+
+# Vertex AI configuration
+vertex_ai:
+  location: europe-west4  # For Gemini Pro availability
+  endpoint: europe-west4-aiplatform.googleapis.com
+  gemini_model: gemini-2.0-flash-lite-001
+  embedding_model: text-embedding-004
+  temperature: 0.3
+  max_output_tokens: 2048
+
+# Taita Taveta County boundaries and configuration
+taita_taveta:
+  # County boundary (simplified)
+  geojson: "config/boundaries/taita_taveta_subcounties.geojson"
+  
+  # Administrative divisions
+  subcounties:
+    voi:
+      geojson: "config/boundaries/voi.geojson"
+    mwatate:
+      geojson: "config/boundaries/mwatate.geojson"
+    wundanyi:
+      geojson: "config/boundaries/wundanyi.geojson"
+    taveta:
+      geojson: "config/boundaries/taveta.geojson"
+
+  # Key mining areas
+  mining_zones:
+    - name: Kasigau
+      coordinates: [38.65, -3.83]
+      minerals: [graphite, gemstones]
+      risk_level: high
+      
+    - name: Kishushe
+      coordinates: [38.45, -3.65]
+      minerals: [copper, gemstones]
+      risk_level: high
+      
+    - name: Mwatate
+      coordinates: [38.38, -3.51]
+      minerals: [iron_ore]
+      risk_level: medium
+      
+    - name: Voi_gemstones
+      coordinates: [38.56, -3.39]
+      minerals: [gemstones]
+      risk_level: medium
+      
+    - name: Tsavo_border
+      coordinates: [38.45, -3.20]
+      minerals: [various]
+      risk_level: critical  # Near protected area
+
+  # Protected areas
+  protected_areas:
+    - name: Tsavo East National Park
+      type: national_park
+      area_km2: 13747
+      
+    - name: Tsavo West National Park
+      type: national_park
+      area_km2: 9065
+      
+    - name: Taita Hills Wildlife Sanctuary
+      type: sanctuary
+      area_km2: 110
+      
+    - name: Lumo Community Wildlife Sanctuary
+      type: conservancy
+      area_km2: 480
+
+# Detection thresholds and parameters
+detection:
+  # Vegetation degradation
+  ndvi_decline_threshold: -0.2
+  ndvi_critical: 0.3
+  nbr_decline_threshold: -0.15
+  
+  # Bare soil exposure
+  bsi_increase_threshold: 0.15
+  bsi_critical: 0.5
+  
+  # Thermal anomalies
+  lst_anomaly_threshold: 3.0  # degrees Celsius
+  lst_critical_threshold: 5.0
+  
+  # Mining indicators
+  iron_oxide_threshold: 1.5
+  clay_minerals_threshold: 1.2
+  
+  # Risk scoring
+  risk_score_immediate: 0.85
+  risk_score_high: 0.7
+  risk_score_medium: 0.5
+  risk_score_low: 0.3
+  
+  # Proximity buffers (meters)
+  river_buffer: 500
+  road_buffer: 100
+  protected_area_buffer: 2000
+  settlement_buffer: 1000
+  
+  # Temporal parameters
+  persistence_days: 30
+  lookback_days: 90
+  baseline_years: 2
+
+# Monitoring schedule
+monitoring:
+  # Processing frequency by risk level
+  schedule:
+    critical_areas: daily
+    high_risk: weekly
+    medium_risk: biweekly
+    low_risk: monthly
+  
+  # Alert settings
+  alerts:
+    immediate_response_hours: 24
+    high_priority_hours: 48
+    medium_priority_hours: 72
+    
+  # Report generation
+  reports:
+    daily_summary: "08:00"
+    weekly_report: "Monday 09:00"
+    monthly_report: "1st of month 10:00"
+
+# Visualization settings
+visualization:
+  tool: leafmap
+  basemap: SATELLITE
+  opacity: 0.7
+  colormap: RdYlGn_r  # Red-Yellow-Green reversed
+  
+  # Map center (Taita Taveta)
+  center:
+    lat: -3.5
+    lon: 38.5
+  zoom: 9
+  
+  # Color schemes for risk levels
+  risk_colors:
+    immediate: "#8B0000"  # Dark red
+    high: "#FF0000"       # Red
+    medium: "#FFA500"     # Orange
+    low: "#FFFF00"        # Yellow
+    stable: "#00FF00"     # Green
+
+# Data quality requirements
+data_quality:
+  min_valid_pixels: 500
+  max_cloud_cover: 40
+  min_scenes: 2
+  confidence_threshold: 0.6
+
+# Logging configuration
+logging:
+  level: INFO
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: logs/terrawatch.log
+  max_size_mb: 100
+  backup_count: 5
+
+# Export settings
+export:
+  formats: [csv, geojson, kml]
+  compression: gzip
+  include_metadata: true
+
+# System limits
+limits:
+  max_aois_per_batch: 100
+  max_export_size_mb: 500
+  max_concurrent_tasks: 10
+  api_rate_limit: 60  # requests per minute

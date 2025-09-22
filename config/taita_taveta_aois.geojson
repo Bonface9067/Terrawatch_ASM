@@ -1,0 +1,220 @@
+{
+  "type": "FeatureCollection",
+  "name": "Taita Taveta Mining Areas of Interest",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "TT_KASIGAU",
+        "name": "Kasigau Mining Zone",
+        "sub_county": "Voi",
+        "ward": "Kasigau",
+        "mining_type": "graphite, gemstones",
+        "risk_level": "high",
+        "licensed": false,
+        "area_km2": 78.5,
+        "population": 12500,
+        "dist_to_tsavo": 15000,
+        "monitoring_priority": "critical"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [38.60, -3.78],
+          [38.70, -3.78],
+          [38.70, -3.88],
+          [38.60, -3.88],
+          [38.60, -3.78]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "TT_KISHUSHE",
+        "name": "Kishushe Copper Belt",
+        "sub_county": "Wundanyi",
+        "ward": "Wumingu/Kishushe",
+        "mining_type": "copper, gemstones",
+        "risk_level": "high",
+        "licensed": true,
+        "area_km2": 45.2,
+        "population": 8500,
+        "dist_to_tsavo": 25000,
+        "monitoring_priority": "high"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [38.40, -3.60],
+          [38.50, -3.60],
+          [38.50, -3.70],
+          [38.40, -3.70],
+          [38.40, -3.60]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "TT_MWATATE_IRON",
+        "name": "Mwatate Iron Ore Zone",
+        "sub_county": "Mwatate",
+        "ward": "Mwatate",
+        "mining_type": "iron_ore",
+        "risk_level": "medium",
+        "licensed": true,
+        "area_km2": 62.8,
+        "population": 15000,
+        "dist_to_tsavo": 35000,
+        "monitoring_priority": "medium"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [38.33, -3.46],
+          [38.43, -3.46],
+          [38.43, -3.56],
+          [38.33, -3.56],
+          [38.33, -3.46]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "TT_VOI_GEMS",
+        "name": "Voi Gemstone Area",
+        "sub_county": "Voi",
+        "ward": "Kaloleni",
+        "mining_type": "gemstones",
+        "risk_level": "medium",
+        "licensed": false,
+        "area_km2": 38.5,
+        "population": 9800,
+        "dist_to_tsavo": 20000,
+        "monitoring_priority": "high"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [38.51, -3.34],
+          [38.61, -3.34],
+          [38.61, -3.44],
+          [38.51, -3.44],
+          [38.51, -3.34]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "TT_TSAVO_BORDER_1",
+        "name": "Tsavo East Border Zone",
+        "sub_county": "Taveta",
+        "ward": "Mata",
+        "mining_type": "various",
+        "risk_level": "critical",
+        "licensed": false,
+        "area_km2": 125.0,
+        "population": 5500,
+        "dist_to_tsavo": 500,
+        "monitoring_priority": "immediate"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [38.40, -3.15],
+          [38.50, -3.15],
+          [38.50, -3.25],
+          [38.40, -3.25],
+          [38.40, -3.15]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "TT_TSAVO_BORDER_2",
+        "name": "Tsavo West Buffer",
+        "sub_county": "Taveta",
+        "ward": "Chala",
+        "mining_type": "gemstones",
+        "risk_level": "critical",
+        "licensed": false,
+        "area_km2": 95.0,
+        "population": 4200,
+        "dist_to_tsavo": 1000,
+        "monitoring_priority": "immediate"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [37.75, -3.25],
+          [37.85, -3.25],
+          [37.85, -3.35],
+          [37.75, -3.35],
+          [37.75, -3.25]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "TT_TAITA_HILLS",
+        "name": "Taita Hills Mining Area",
+        "sub_county": "Wundanyi",
+        "ward": "Werugha",
+        "mining_type": "gemstones",
+        "risk_level": "low",
+        "licensed": true,
+        "area_km2": 42.0,
+        "population": 11000,
+        "dist_to_tsavo": 45000,
+        "monitoring_priority": "low"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [38.30, -3.35],
+          [38.40, -3.35],
+          [38.40, -3.45],
+          [38.30, -3.45],
+          [38.30, -3.35]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "aoi_id": "TT_SAGALLA",
+        "name": "Sagalla Quarry Zone",
+        "sub_county": "Voi",
+        "ward": "Sagalla",
+        "mining_type": "quarry",
+        "risk_level": "low",
+        "licensed": true,
+        "area_km2": 28.5,
+        "population": 6500,
+        "dist_to_tsavo": 50000,
+        "monitoring_priority": "low"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [38.55, -3.45],
+          [38.65, -3.45],
+          [38.65, -3.55],
+          [38.55, -3.55],
+          [38.55, -3.45]
+        ]]
+      }
+    }
+  ]
+}

@@ -12,8 +12,8 @@ build
 
 
 # Environments
-.env
-.env.*
+# .env
+# .env.*
 # .venv
 # env/
 # venv/
@@ -28,15 +28,5 @@ build
 # Project specific
 *.log
 logs/*.log
-data/exports/*
-data/temp/*
-reports/*.pdf
-reports/*.txt
-config/*
 # Secrets
-*.json
-*.key
-*.pem
-credentials.json
-service-account-key.json
 *.sh
