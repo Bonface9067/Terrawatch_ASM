@@ -276,10 +276,11 @@ The workflow generates the following outputs:
 ### BigQuery Tables
 - `{dataset}.time_series_analysis` - Satellite indicator time series
 - `{dataset}.narrative_summary` - AI-generated insights
-- `{dataset}.documents_embeddings` - Searchable knowledge base
+- `{dataset}.embeddings_enhanced` - Searchable knowledge base
 - `{dataset}.forecast_{indicator}` - Predictive analytics
 - `{dataset}.anomalies_{indicator}` - Anomaly detection results
-- `{dataset}.misland_*` - SDG 15.3.1 compliance metrics
+- `{dataset}.misland_degradation_stats*` - SDG 15.3.1 compliance metrics
+- `{dataset}.mining_alerts*` - AI generated alerts from the earth observation analysis
 
 ### Optional Exports
 - CSV files to Google Cloud Storage
