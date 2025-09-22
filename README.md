@@ -47,15 +47,7 @@ TerraWatch ASM is an end-to-end geospatial analytics and AI workflow that levera
 
 ### 1. Environment Setup
 
-#### Option A: Kaggle Environment
-```python
-# In Kaggle Notebook:
-# 1. Go to Add-ons → Google Cloud
-# 2. Select your GCP project
-# 3. Enable BigQuery
-```
-
-#### Option B: Local Environment
+#### Option A: Local Environment
 ```bash
 # Create virtual environment
 python -m venv .venv
